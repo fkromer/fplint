@@ -13,6 +13,7 @@ Checklist about Python Functional Programming best practices/idioms for a potent
 
 * F01: assert no global statement used -> reason: global data dependency introduces state (Lott 2018, p.24)
 * F02: assert no non-local statement used in non-nested function definitions -> reason: non local data dependency introduces state (Lott 2018, p. 24)
+* F03: assert pure recursive functions -> reason: Python has a recursion limit which could be modified but should not due OS memory limitation and probable crash of the Python interpreter. A manual Tail-CallOptimization (TCO, convert pure recursion to generator expression) may be required. (Lott 2018, p. 30)
 
 ## Data types
 
