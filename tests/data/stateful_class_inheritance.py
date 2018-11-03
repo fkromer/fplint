@@ -1,12 +1,13 @@
 class StatefulClass(Object):
-    def __init__(self, variable):
-        self.variable = variable
+    """Class is stateful due to instance attribute."""
+    def __init__(self, value):
+        self.instance_attribute = value
 
     def change_state(self, value):
-        self.variable = value
+        self.instance_attribute = value
 
     def get_state(self):
-        return self.variable
+        return self.instance_attribute
 
 
 class StatelessClass(StatefulClass):
